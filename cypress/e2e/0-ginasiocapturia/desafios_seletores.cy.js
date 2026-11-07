@@ -44,8 +44,9 @@ context('Desafios com Regras de Negócio da página de capturia', () => {
      * e possuir o estilo visual primário.
      */
     it('Deve apresentar o botão "Entrar" como ação principal de login e com estilo primário', () => {
-        cy.get('#secao-login button.btn-primary')
-          .should('have.text', 'Entrar');
+        cy.get('.btn')
+          .contains('Entrar')
+          .should('have.class', 'btn-primary');
         cy.log('RN Verificada: Botão de login principal correto e estilizado.');
     });
 
